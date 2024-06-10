@@ -5,13 +5,14 @@
     <title>WEB開発7回目</title>
 </head>
 <body>
-    <form action="sample9.php" menthod="get">
+    <form action="sample9.php" menthod="post">
         <input id="name" type="text" name="name">
         <input type="submit" value="送信">
     </form>
     <?php
         if(isset($_GET['name'])){
-            echo $_GET['name'];
+            $value = htmlspecialchars($_GET['name']);
+            echo $value;
         }
     ?>
 </body>
